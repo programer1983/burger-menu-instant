@@ -34,7 +34,7 @@
 }
 
 .burger {
-    display: flex;
+    display: none;
     position: relative;
     align-items: center;
     justify-content: flex-end;
@@ -65,4 +65,22 @@
 
 .burger::after {
    bottom: 0;
+}
+
+.burger.active span {
+    transform: scale(0);
+}
+
+.burger.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%); 
+}
+
+@media (max-width: 900px){
+
 }
